@@ -27,7 +27,7 @@ function deleteGame(int $id): void {
 
 function updateGame(int $id, string $name, int $year, string $platform): array {
     $db = getDB();
-    $statement = 'UPDATE `games` SET `name`=:name, `year`=:year, `platfomr`=:platform WHERE `id`=:id';
+    $statement = 'UPDATE `games` SET `name`=:name, `year`=:year, `platform`=:platform WHERE `id`=:id';
     $query = $db->prepare($statement);
     $query->execute(['id' => $id, 'name'=> $name, 'year' => $year, 'platform' => $platform]);
 
